@@ -20,13 +20,13 @@ print(repr(myTable)) --> {hello = "world", isCool = true, score = 5}
 
 The second value can be a table of options, which allows you to **pretty-print** with newlines:
 
-```
+```lua
 print(repr(myTable, {pretty=true}))
 ```
 
 Here is an example that shows off all the bells and whistles:
 
-```
+```lua
 local repr = require(3148021300)
  
 local myTable = {
