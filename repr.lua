@@ -282,6 +282,8 @@ local function repr(value, reprSettings)
 			return ("Vector3.new(%d, %d, %d)"):format(v.X, v.Y, v.Z)
 		elseif typeof(v) == "Vector3int16" then
 			return ("Vector3int16.new(%d, %d, %d)"):format(v.X, v.Y, v.Z)
+		elseif typeof(v) == "DateTime" then
+			return ("DateTime.fromIsoDate(%q)"):format(v:ToIsoDate())
 		else
 			return "<Roblox:" .. typeof(v) .. ">"
 		end
