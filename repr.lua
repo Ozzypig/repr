@@ -275,7 +275,7 @@ local function repr(value, reprSettings)
 				v.X.Scale, v.X.Offset, v.Y.Scale, v.Y.Offset
 			)
 		elseif typeof(v) == "Vector2" then
-			return ("Vector2.new(%d, %d"):format(v.X, v.Y)
+			return ("Vector2.new(%d, %d)"):format(v.X, v.Y)
 		elseif typeof(v) == "Vector2int16" then
 			return ("Vector2int16.new(%d, %d)"):format(v.X, v.Y)
 		elseif typeof(v) == "Vector3" then
