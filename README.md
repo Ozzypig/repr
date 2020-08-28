@@ -2,6 +2,24 @@
 
 `repr` is a simple Lua function that works a lot like [Python's repr](https://docs.python.org/3/library/functions.html#repr). It converts a Lua value into a printable string.
 
+## Quick Install
+
+Paste the following into the **Command Bar** (View &lt; Command Bar) in Roblox Studio. It will use [HttpService](https://developer.roblox.com/en-us/api-reference/class/HttpService) to download and insert repr into [ReplicatedStorage](https://developer.roblox.com/en-us/api-reference/class/ReplicatedStorage) automatically.
+
+```lua
+local Url = "https://raw.githubusercontent.com/Ozzypig/repr/master/repr.lua"
+local HttpService = game:GetService("HttpService")
+local httpEnabled = HttpService.HttpEnabled
+HttpService.HttpEnabled = true
+local script = Instance.new("ModuleScript", game:GetService("ReplicatedStorage"))
+script.Name = "repr"
+game:GetService("Selection"):Set{script}
+script.Source = HttpService:RequestAsync{Url=Url;}.Body
+HttpService.HttpEnabled = httpEnabled
+```
+
+Alternatively, [&darr; Download the latest model file from GitHub releases](https://github.com/Ozzypig/repr/releases/latest/download/repr.rbxmx)
+
 ## Usage
 
 Call the function with any single value and it will return a string.
