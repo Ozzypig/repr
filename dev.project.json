@@ -1,0 +1,13 @@
+{
+	"name": "repr",
+	"tree": {
+		"$className": "DataModel",
+		"ReplicatedStorage": {
+			"$className": "ReplicatedStorage",
+			"$ignoreUnknownInstances": true,
+			"repr": {
+				"$path": "repr.lua"
+			}
+		}
+	}
+}
