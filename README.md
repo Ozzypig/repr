@@ -59,11 +59,23 @@ local reprSettings = {
 print(repr(myTable, reprSettings))
 ```
 
+## Development and Building
+
+You can use [Rojo](httos://github.com/Roblox/rojo) 0.5.x to build repr into a `repr.rbxmx`, which you can include in your Roblox places.
+
+```bash
+$ rojo serve
+$ rojo build --output repr.rbxmx
+```
+
+Building repr into a model file can also be done by invoking GNU `make`.
+
 ## Version History
 
 * 5 May 2019 - v1.0 Initial release
 * 6 May 2019 - v1.1 Now supports all Roblox data types (Vector3, Color3, etc.)
 * 5 June 2019 - This repository was created.
+* 28 August 2020 - Added Rojo [project](default.project.json) and [Makefile](Makefile) to this repository
 
 ## License
 
